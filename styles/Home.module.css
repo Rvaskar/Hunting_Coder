@@ -104,6 +104,10 @@
   transform: translateZ(0);
 }
 
+.headFont{
+  font-size: 3rem;
+}
+
 .logo {
   position: relative;
 }
