@@ -4,7 +4,32 @@
   justify-content: space-between;
   align-items: center;
   padding: 6rem;
+  padding-top: 3rem;
   min-height: 100vh;
+}
+.navBar{
+  height: 3rem;
+}
+.navBar ul{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+.navBar ul li{
+  font-weight: 600;
+  text-align: center;
+  padding: 5px 1rem;
+  margin: 5px 1.5rem;
+  border-radius: 8px;
+  width: 5rem;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.navBar ul li:hover{
+  background-color: rgba(91, 91, 91, 0.455);
+  
 }
 
 .description {
@@ -76,8 +101,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   position: relative;
-  padding: 4rem 0;
+  padding: 1rem 0;
 }
 
 .center::before {
@@ -106,6 +132,7 @@
 
 .headFont{
   font-size: 3rem;
+  margin-bottom: 2rem;
 }
 
 .logo {
