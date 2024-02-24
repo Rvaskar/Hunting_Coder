@@ -15,17 +15,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.js</code>
-          </p>
-          
-        </div>
+        <nav>
+          <ul>
+            <li>home</li>
+            <li>about</li>
+            <li>blog</li>
+            <li>contact</li>
+          </ul>
+        </nav>
 
         <div className={styles.center}>
           <h1 className={styles.headFont}>Hunting Coder</h1>
         </div>
+          <p>A blog for hunting coders who hunt for code</p>
 
         <div className={styles.grid}>
           <a
@@ -70,20 +72,7 @@ export default function Home() {
             </p>
           </a>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
+          
         </div>
       </main>
     </>
