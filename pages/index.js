@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import Link from 'next/link'
 import styles from "@/styles/Home.module.css";
+import learn from "../styles/learn.module.css"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -50,7 +51,7 @@ export default function Home() {
 
           <a
             href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
+            className={`${styles.card} ${learn.cont}`}
             target="_blank"
             rel="noopener noreferrer"
           >
