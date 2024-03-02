@@ -11,7 +11,7 @@ const About = () => {
 
       <div className={styles.aboutCont}>
         <div className={styles.imgWrap} >
-            <Image className={styles.myImg} src="/about-img1.jpg" width={500} height={300} />
+            <Image className={styles.myImg} src="/about-img1.jpg" alt="img:coder" width={500} height={300} />
           </div>
         <div className={styles.information}> 
           <h1>Hunting Coders</h1>

@@ -1,28 +1,34 @@
-import React from "react";
+import React, {useEffect, useState }from "react";
 import styles from "@/styles/Blog.module.css";
 import Link from 'next/link'
 
 const Blog = () => {
+
+  const [blogs, setBlogs] = useState([])
+
+  useEffect(() => {
+    console.log('useEffect is running')
+    fetch('http://localhost:3000/api/blogs').then((a)=>{
+      return a.json();}).then((parsed)=>{
+        console.log(parsed)
+        setBlogs(parsed)
+      })
+  },[])
+
+
   return (
 
     <main className={`${styles.main} `}>
-      <div className={styles.grid}>
-        <div className={styles.card}>
-          <Link href={'/blogpost/learn-javascript'}>
-          <h3>How to write jsx code in 2024?</h3>
-          </Link>
-          <p>Find in-depth information about Next.js features and&nbsp;API.</p>
-        </div>
-
-        <div className={styles.card}>
-          <h3>How to write jsx code in 2024?</h3>
-          <p>Find in-depth information about Next.js features and&nbsp;API.</p>
-        </div>
-
-        <div className={styles.card}>
-          <h3>How to write jsx code in 2024?</h3>
-          <p>Find in-depth information about Next.js features and&nbsp;API.</p>
-        </div>
+      <div className={styles.grid1}>
+        {blogs.map((blogItem)=>{
+          return <div key={blogItem.slug} className={styles.card}>
+            <Link href={`/blogpost/${blogItem.slug}`}>
+            <h3>{blogItem.title}</h3>
+            </Link>
+            <p>{blogItem.content.substr(0,200)}</p>
+          </div>
+          
+        })}
       </div>
       </main>
   );

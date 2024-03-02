@@ -2,5 +2,6 @@
     "title": "how to lean javascript",
     "description": "a guide on how to learn and master the language of web development",
     "content" : "To begin learning JavaScript, start by understanding the basics of programming concepts such as variables, data types, and control structures. Online tutorials and interactive coding platforms like Code academy or freeCodeCamp can be great resources to get started. Practice is key when learning JavaScript. Write small scripts, experiment with code snippets, and work on simple projects to reinforce your understanding of the language. Debugging errors and troubleshooting issues will also help you grasp concepts more effectively Stay updated with the latest trends and best practices in JavaScript by following blogs, joining online communities like Stack Overflow or Reddit's r/javascript, and participating in coding challenges. Continuous learning and hands-on experience will help you become proficient in JavaScript development.",
-    "author" : "rutik"
+    "author" : "rutik",
+    "slug": "how-to-lean-javascript"
 }

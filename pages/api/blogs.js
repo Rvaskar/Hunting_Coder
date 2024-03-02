@@ -1,16 +1,39 @@
+
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-//http://localhost:3000/api/blogs?slug=how-to-learn-javascript
+//http://localhost:3000/api/getblog
 
 import * as fs from 'fs';
 
 
-export default function handler(req, res) {
-  fs.readFile(`blogdata/${req.query.slug}.json`,'utf-8', (err, data) => {
-    if(err){
-      res.status(500).json( {err : "no such blog found"});
-    }
-    console.log(req.query.slug)
-    const JSONdata = JSON.parse(data)
-    res.status(200).json( JSONdata);
-  })
+export default async function handler(req, res) {
+  let data = await fs.promises.readdir(`blogdata`)
+  let myfile;
+  let allBlogs = [];
+
+  for (let index = 0; index < data.length; index++) {
+    const item = data[index];
+
+    myfile = await  fs.promises.readFile(('blogdata/' + item),'utf-8');
+    console.log(myfile)
+    allBlogs.push(JSON.parse(myfile));
+    
+  }
+
+  res.status(200).json( allBlogs)
+  // fs.readdir(`blogdata`, (err, data) => {
+  //   if(err){
+  //     res.status(500).json( {err : "no directory"});
+  //   }
+  //   let allBlogs = [];
+
+  //   data.forEach((item)=>{
+  //     console.log(item)
+  //     fs.readFile(('blogdata/' + item), (d)=>{
+  //       allBlogs.push(d)
+  //     })
+  //   })
+  //   res.status(200).json( data);
+  // })
 }
+
+

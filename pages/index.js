@@ -23,7 +23,7 @@ export default function Home() {
         <div className={styles.center}>
           <h1 className={styles.headFont}>Hunting Coder</h1>
           <div className={styles.imgWrap} >
-            <Image className={styles.myImg} src="/homeimg.jpg" width={237} height={158} />
+            <Image className={styles.myImg} src="/homeimg.jpg" alt='home.img' width={237} height={158} />
           </div>
           <p>A blog for Hunting coders by Hunting coder</p>
         </div>
