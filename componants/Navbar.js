@@ -6,10 +6,10 @@ const Navbar = () => {
   return (
     <nav className={styles.navBar}>
     <ul>
-      <Link href='/'><li>home</li></Link>
-      <Link href='/about'> <li>about</li></Link>
-      <Link href='/blog'><li>blog</li></Link>
-      <Link href='/contact'><li>contact</li></Link>
+      <li><Link href='/'><span className={styles.Link}>Home</span></Link></li>
+      <li><Link href='/about'> <span className={styles.Link}>About</span></Link></li>
+      <li><Link href='/blog'><span className={styles.Link}>Blog</span></Link></li>
+      <li><Link href='/contact'><span className={styles.Link}>Contact</span></Link></li>
     </ul>
   </nav>
   )

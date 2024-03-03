@@ -17,12 +17,15 @@
   display: flex;
   justify-content: space-between;
     list-style: none;
+  column-gap: 4rem;
 }
 .navBar ul li{
   font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 5px 1rem;
-  margin: 5px 1.5rem;
+  padding: 0px 1rem;
   border-radius: 8px;
   width: 5rem;
   -webkit-border-radius: 8px;
@@ -30,7 +33,22 @@
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
 }
-.navBar ul li:hover{
+.navBar ul .Link{
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px 1rem;
+  border-radius: 8px;
+  width: 5rem;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.navBar .Link:hover{
   background-color: rgba(91, 91, 91, 0.455);
   
 }
